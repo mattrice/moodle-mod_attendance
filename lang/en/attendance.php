@@ -93,10 +93,10 @@ $string['deletingstatus'] = 'Deleting status for the course';
 $string['description'] = 'Description';
 $string['display'] = 'Display';
 $string['displaymode'] = 'Display mode';
+$string['donotusepaging'] = 'Show all results on the same page';
 $string['downloadexcel'] = 'Download in Excel format';
 $string['downloadooo'] = 'Download in OpenOffice format';
 $string['downloadtext'] = 'Download in text format';
-$string['donotusepaging'] = 'Do not use paging';
 $string['duration'] = 'Duration';
 $string['editsession'] = 'Edit Session';
 $string['endtime'] = 'Session end time';
@@ -107,6 +107,7 @@ $string['enrolmentsuspended'] = 'Enrolment suspended';
 $string['errorgroupsnotselected'] = 'Select one or more groups';
 $string['errorinaddingsession'] = 'Error in adding session';
 $string['erroringeneratingsessions'] = 'Error in generating sessions ';
+$string['frequencyhint'] = 'Class meets every ';
 $string['gradebookexplanation'] = 'Grade in gradebook';
 $string['gradebookexplanation_help'] = 'The Attendance module displays your current attendance grade based on the number of points you have earned to date and the number of points that could have been earned to date; it does not include class periods in the future. In the gradebook, your attendance grade is based on your current attendance percentage and the number of points that can be earned over the entire duration of the course, including future class periods. As such, your attendance grades displayed in the Attendance module and in the gradebook may not be the same number of points but they are the same percentage.
 
@@ -198,12 +199,12 @@ $string['startofperiod'] = 'Start of period';
 $string['status'] = 'Status';
 $string['statuses'] = 'Statuses';
 $string['statusdeleted'] = 'Status deleted';
-$string['strftimedm'] = '%d.%m';
-$string['strftimedmy'] = '%d.%m.%Y';
-$string['strftimedmyhm'] = '%d.%m.%Y %H.%M'; // Line added to allow multiple sessions in the same day.
-$string['strftimedmyw'] = '%d.%m.%y&nbsp;(%a)';
+$string['strftimedm'] = '%d/%m';
+$string['strftimedmy'] = '%d/%m/%Y';
+$string['strftimedmyhm'] = '%d/%m/%Y %H:%M'; // Line added to allow multiple sessions in the same day.
+$string['strftimedmyw'] = '%d/%m/%y&nbsp;(%a)';
 $string['strftimehm'] = '%H:%M'; // Line added to allow display of time.
-$string['strftimeshortdate'] = '%d.%m.%Y';
+$string['strftimeshortdate'] = '%d/%m/%Y';
 $string['studentid'] = 'Student ID';
 $string['takeattendance'] = 'Take attendance';
 $string['thiscourse'] = 'This course';
@@ -216,7 +217,6 @@ $string['viewmode'] = 'View mode';
 $string['week'] = 'week(s)';
 $string['weeks'] = 'Weeks';
 $string['youcantdo'] = 'You can\'t do anything';
-
 $string['eventreportviewed'] = 'Report viewed';
 $string['eventsessionadded'] = 'Session added';
 $string['eventsessionupdated'] = 'Session updated';
@@ -233,3 +233,11 @@ $string['attendance_already_submitted'] = 'You may not self register attendance 
 $string['lowgrade'] = 'Low grade';
 $string['submitattendance'] = 'Submit attendance';
 $string['attendancenotset'] = 'You must set your attendance';
+$string['modulename_help'] = 'The Attendance module is designed for teachers to be able to take attendance during class, and for students to be able to view their own attendance record.
+
+A teacher can mark the attenance status of a student as "Present", "Absent", "Late", or "Excused". These status descriptions are configurable and more can be added. The teacher adds Attendance as an activity of a course and then sets up the sessions whose attendance is tracked.
+
+The Attendance module can generate reports for either the entire class or for individual students. Students may also see their own attendance record if the activity is not hidden.';
+$string['modulename_link'] = 'Attendance_module#Teacher.27s_usage_instructions';
+$string['resultsperpage'] = 'Results per page';
+$string['resultsperpage_desc'] = 'This setting controls the number of rows per page in an exported report.';

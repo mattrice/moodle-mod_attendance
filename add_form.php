@@ -141,6 +141,7 @@ class mod_attendance_add_form extends moodleform {
 
         $period = array(1=>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36);
         $periodgroup = array();
+        $periodgroup[] =& $mform->createElement('static', 'periodhint', '', get_string('frequencyhint', 'attendance'));
         $periodgroup[] =& $mform->createElement('select', 'period', '', $period, false, true);
         $periodgroup[] =& $mform->createElement('static', 'perioddesc', '', get_string('week', 'attendance'));
         $mform->addGroup($periodgroup, 'periodgroup', get_string('period', 'attendance'), array(' '), false);
