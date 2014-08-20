@@ -103,7 +103,7 @@ class mod_attendance_renderer extends plugin_renderer_base {
             $group = $fcontrols->pageparams->group;
         }
 
-        $totalusers = count_enrolled_users(get_context_instance(CONTEXT_MODULE, $fcontrols->cm->id), 'mod/attendance:canbelisted', $group);
+        $totalusers = count_enrolled_users(context_module::instance($fcontrols->cm->id), 'mod/attendance:canbelisted', $group);
         $usersperpage = $fcontrols->pageparams->perpage;
         if (empty($fcontrols->pageparams->page) || !$fcontrols->pageparams->page || !$totalusers || !$usersperpage) {
             return $paging_controls;
@@ -359,7 +359,7 @@ class mod_attendance_renderer extends plugin_renderer_base {
             }
         }
 
-        $totalusers = count_enrolled_users(get_context_instance(CONTEXT_MODULE, $takedata->cm->id), 'mod/attendance:canbelisted', $group);
+        $totalusers = count_enrolled_users(context_module::instance($takedata->cm->id), 'mod/attendance:canbelisted', $group);
         $usersperpage = $takedata->pageparams->perpage;
         if (!empty($takedata->pageparams->page) && $takedata->pageparams->page && $totalusers && $usersperpage) {
             $controls .= html_writer::empty_tag('br');
@@ -451,6 +451,11 @@ class mod_attendance_renderer extends plugin_renderer_base {
             $fullname = $this->output->user_picture($user).$fullname;
 
             $ucdata = $this->construct_take_user_controls($takedata, $user);
+            if (!$ucdata) {
+                // We didn't get data for some reason (e.g. suspended enrollment)
+                // just continue to the next iteration
+                continue;
+            }
             if (array_key_exists('warning', $ucdata)) {
                 $fullname .= html_writer::empty_tag('br');
                 $fullname .= $ucdata['warning'];
@@ -499,6 +504,11 @@ class mod_attendance_renderer extends plugin_renderer_base {
             $celltext .= html_writer::tag('span', $fullname, array('class' => 'fullname'));
             $celltext .= html_writer::empty_tag('br');
             $ucdata = $this->construct_take_user_controls($takedata, $user);
+            if (!$ucdata) {
+                // We didn't get data for some reason (e.g. suspended enrollment)
+                // just continue to the next iteration
+                continue;
+            }
             $celltext .= is_array($ucdata['text']) ? implode('', $ucdata['text']) : $ucdata['text'];
             if (array_key_exists('warning', $ucdata)) {
                 $celltext .= html_writer::empty_tag('br');
@@ -556,9 +566,12 @@ class mod_attendance_renderer extends plugin_renderer_base {
             $celldata['class'] = 'userwithoutenrol';
         } else if (!$user->enrolmentend and $user->enrolmentstatus == ENROL_USER_SUSPENDED) {
             // No enrolmentend and ENROL_USER_SUSPENDED.
-            $celldata['text'] = get_string('enrolmentsuspended', 'attendance');
-            $celldata['colspan'] = count($takedata->statuses) + 1;
-            $celldata['class'] = 'userwithoutenrol';
+            if (false) {
+                //If we want to include suspended users - currently no setting exists
+                $celldata['text'] = get_string('enrolmentsuspended', 'attendance');
+                $celldata['colspan'] = count($takedata->statuses) + 1;
+                $celldata['class'] = 'userwithoutenrol';
+            }
         } else {
             if ($takedata->updatemode and !array_key_exists($user->id, $takedata->sessionlog)) {
                 $celldata['class'] = 'userwithoutdata';

@@ -93,6 +93,7 @@ $string['deletingstatus'] = 'Deleting status for the course';
 $string['description'] = 'Description';
 $string['display'] = 'Display';
 $string['displaymode'] = 'Display mode';
+$string['donotusepaging'] = 'Show all results on the same page';
 $string['downloadexcel'] = 'Download in Excel format';
 $string['downloadooo'] = 'Download in OpenOffice format';
 $string['downloadtext'] = 'Download in text format';
@@ -124,11 +125,12 @@ $string['indetail'] = 'In detail...';
 $string['invalidsessionenddate'] = 'The session end date can not be earlier than the session start date';
 $string['jumpto'] = 'Jump to';
 $string['modulename'] = 'Attendance';
-$string['modulename_help'] = 'The attendance activity module enables a teacher to take attendance during class and students to view their own attendance record.
+$string['modulename_help'] = 'The Attendance module is designed for teachers to be able to take attendance during class, and for students to be able to view their own attendance record.
 
-The teacher can create multiple sessions and can mark the attendance status as "Present", "Absent", "Late", or "Excused" or modify the statuses to suit their needs.
+A teacher can mark the attenance status of a student as "Present", "Absent", "Late", or "Excused". These status descriptions are configurable and more can be added. The teacher adds Attendance as an activity of a course and then sets up the sessions whose attendance is tracked.
 
-Reports are available for the entire class or individual students.';
+The Attendance module can generate reports for either the entire class or for individual students. Students may also see their own attendance record if the activity is not hidden.';
+$string['modulename_link'] = 'Attendance_module#Teacher.27s_usage_instructions';
 $string['modulenameplural'] = 'Attendances';
 $string['months'] = 'Months';
 $string['moreattendance'] = 'Attendance has been successfully taken for this page';
@@ -150,6 +152,7 @@ $string['notfound'] = 'Attendance activity not found in this course!';
 $string['noupgradefromthisversion'] = 'The Attendance module cannot upgrade from the version of attforblock you have installed. - please delete attforblock or upgrade it to the latest version before isntalling the new attendance module';
 $string['olddate'] = 'Old date';
 $string['period'] = 'Frequency';
+$string['periodhint'] = 'Class meets every ';
 $string['pluginname'] = 'Attendance';
 $string['pluginadministration'] = 'Attendance administration';
 $string['remarks'] = 'Remarks';
@@ -157,6 +160,8 @@ $string['report'] = 'Report';
 $string['required'] = 'Required*';
 $string['resetdescription'] = 'Remember that deleting attendance data will erase information from database. You can just hide older sessions having changed start date of course!';
 $string['resetstatuses'] = 'Reset statuses to default';
+$string['resultsperpage'] = 'Results per page';
+$string['resultsperpage_desc'] = 'This setting controls the number of rows per page in an exported report.';
 $string['restoredefaults'] = 'Restore defaults';
 $string['save'] = 'Save attendance';
 $string['session'] = 'Session';
@@ -211,3 +216,4 @@ $string['viewmode'] = 'View mode';
 $string['week'] = 'week(s)';
 $string['weeks'] = 'Weeks';
 $string['youcantdo'] = 'You can\'t do anything';
+
