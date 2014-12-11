@@ -97,6 +97,7 @@ $string['donotusepaging'] = 'Show all results on the same page';
 $string['downloadexcel'] = 'Download in Excel format';
 $string['downloadooo'] = 'Download in OpenOffice format';
 $string['downloadtext'] = 'Download in text format';
+$string['donotusepaging'] = 'Do not use paging';
 $string['duration'] = 'Duration';
 $string['editsession'] = 'Edit Session';
 $string['endtime'] = 'Session end time';
@@ -161,6 +162,8 @@ $string['report'] = 'Report';
 $string['required'] = 'Required*';
 $string['resetdescription'] = 'Remember that deleting attendance data will erase information from database. You can just hide older sessions having changed start date of course!';
 $string['resetstatuses'] = 'Reset statuses to default';
+$string['resultsperpage'] = 'Results per page';
+$string['resultsperpage_desc'] = 'This setting controls the number of rows per page in an exported report.';
 $string['restoredefaults'] = 'Restore defaults';
 $string['resultsperpage'] = 'Results per page';
 $string['resultsperpage_desc'] = 'Number of students displayed on a page';
@@ -217,6 +220,9 @@ $string['viewmode'] = 'View mode';
 $string['week'] = 'week(s)';
 $string['weeks'] = 'Weeks';
 $string['youcantdo'] = 'You can\'t do anything';
+<<<<<<< HEAD
+
+=======
 // New strings.
 $string['studentscanmark'] = 'Allow students to record own attendance';
 $string['studentscanmark_help'] = 'If checked students will be able to change their own attendance status for the session.';
@@ -225,3 +231,4 @@ $string['attendance_already_submitted'] = 'You may not self register attendance 
 $string['lowgrade'] = 'Low grade';
 $string['submitattendance'] = 'Submit attendance';
 $string['attendancenotset'] = 'You must set your attendance';
+>>>>>>> origin/MOODLE_26_STABLE

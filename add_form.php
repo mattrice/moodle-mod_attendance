@@ -78,9 +78,9 @@ class mod_attendance_add_form extends moodleform {
         }
         if ($groupmode == SEPARATEGROUPS or $groupmode == VISIBLEGROUPS) {
             if ($groupmode == SEPARATEGROUPS and !has_capability('moodle/site:accessallgroups', $modcontext)) {
-                $groups = groups_get_all_groups ($course->id, $USER->id);
+                $groups = groups_get_all_groups ($course->id, $USER->id, $cm->groupingid);
             } else {
-                $groups = groups_get_all_groups($course->id);
+                $groups = groups_get_all_groups($course->id, 0, $cm->groupingid);
             }
             if ($groups) {
                 $selectgroups = array();
@@ -102,6 +102,10 @@ class mod_attendance_add_form extends moodleform {
 
         $mform->addElement('checkbox', 'addmultiply', '', get_string('createmultiplesessions', 'attendance'));
         $mform->addHelpButton('addmultiply', 'createmultiplesessions', 'attendance');
+
+        // Students can mark own attendance.
+        $mform->addElement('checkbox', 'studentscanmark', '', get_string('studentscanmark','attendance'));
+        $mform->addHelpButton('studentscanmark', 'studentscanmark', 'attendance');
 
         $mform->addElement('date_time_selector', 'sessiondate', get_string('sessiondate', 'attendance'));
 
