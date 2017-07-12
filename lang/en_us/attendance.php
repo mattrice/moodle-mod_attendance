@@ -15,16 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version information
+ * Strings for component 'attendance', language 'en'
  *
- * @package    mod_attendance
+ * @package   mod_attendance
  * @copyright  2011 Artem Andreev <andreev.artem@gmail.com>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$plugin->version  = 2016052204;
-$plugin->requires = 2016052300;
-$plugin->release = '3.1.1.3';
-$plugin->maturity  = MATURITY_STABLE;
-$plugin->cron     = 0;
-$plugin->component = 'mod_attendance';
+$string['strftimedm'] = '%m/%d';
+$string['strftimedmy'] = '%m/%d/%Y';
+$string['strftimedmyhm'] = '%m/%d/%Y %I:%M %p'; // Line added to allow multiple sessions in the same day.
+$string['strftimedmyw'] = '%m/%d/%y&nbsp;(%a)';
+$string['strftimehm'] = '%I:%M %p'; // Line added to allow display of time.
+$string['strftimeshortdate'] = '%m/%d/%Y';

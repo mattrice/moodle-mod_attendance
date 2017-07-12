@@ -144,6 +144,7 @@ $string['modulename_help'] = 'The attendance activity module enables a teacher t
 The teacher can create multiple sessions and can mark the attendance status as "Present", "Absent", "Late", or "Excused" or modify the statuses to suit their needs.
 
 Reports are available for the entire class or individual students.';
+$string['modulename_link'] = 'Attendance_activity';
 $string['modulenameplural'] = 'Attendances';
 $string['months'] = 'Months';
 $string['moreattendance'] = 'Attendance has been successfully taken for this page';
